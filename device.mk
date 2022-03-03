@@ -25,6 +25,9 @@ $(call inherit-product, vendor/realme/RMX2020/RMX2020-vendor.mk)
 # IMS
 $(call inherit-product, vendor/realme/RMX2020-ims/RMX2020-ims.mk)
 
+# Mediatek Common Kernel Headers
+$(call inherit-product, kernel/mediatek/common-headers/device.mk)
+
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Dynamic Partition
