@@ -28,12 +28,6 @@ $(call inherit-product, vendor/realme/RMX2020/RMX2020-vendor.mk)
 # IMS
 $(call inherit-product, vendor/realme/RMX2020-ims/RMX2020-ims.mk)
 
-# RealmeDirac
-$(call inherit-product-if-exists, packages/apps/RealmeDirac/dirac.mk)
-
-# Parts
-$(call inherit-product-if-exists, packages/apps/RealmeParts/parts.mk)
-
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Dynamic Partition
@@ -90,6 +84,11 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
 TARGET_EXCLUDES_AUDIOFX := true
+
+# Android Extras
+PRODUCT_PACKAGES += \
+    ThemePicker \
+    messaging
 
 # APN
 PRODUCT_COPY_FILES += \
