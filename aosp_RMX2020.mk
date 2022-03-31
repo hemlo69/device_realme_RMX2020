@@ -12,10 +12,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/RMX2020/device.mk)
 
 # Inherit some common ArrowOS stuff.
-$(call inherit-product, vendor/evolution/config/common.mk)
+$(call inherit-product, vendor/aosp/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := evolution_RMX2020
+PRODUCT_NAME := aosp_RMX2020
 PRODUCT_DEVICE := RMX2020
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := realme Monet
