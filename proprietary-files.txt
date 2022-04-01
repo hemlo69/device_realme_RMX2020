@@ -889,7 +889,7 @@ vendor/lib64/libFactoryMetaAta.so
 # Fingerprint
 vendor/bin/hw/vendor.oppo.hardware.biometrics.fingerprint@2.1-service
 vendor/bin/hw/vendor.silead.hardware.fingerprintext@1.0-service
-vendor/etc/init/vendor.oppo.hardware.biometrics.fingerprint@2.1-service.rc
+vendor/etc/init/vendor.oppo.hardware.biometrics.fingerprint@2.1-service.rc|85928aca3e8473d43214e0cb0ae2f1bbae5771ea
 vendor/etc/init/vendor.silead.hardware.fingerprintext@1.0-service.rc
 vendor/etc/permissions/com.fingerprints.fpmmi.xml
 vendor/lib/hw/fingerprint.silead.default.so
