@@ -38,8 +38,8 @@ TARGET_SCREEN_WIDTH := 720
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0.vendor \
     android.hardware.audio.service \
-    android.hardware.audio@6.0-impl \
-    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio@6.0-impl:32 \
+    android.hardware.audio.effect@6.0-impl:32 \
     android.hardware.audio.common@6.0-util \
     android.hardware.audio@6.0-util \
     android.hardware.soundtrigger@2.3.vendor 
@@ -148,6 +148,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
     android.hardware.gatekeeper@1.0.vendor \
     android.hardware.gatekeeper@1.0-impl
+
+# Google Dialer Call recording
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -347,10 +351,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.recovery.mt6768.rc
 
-# Releasetoold script
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/egis.sh:install/bin/egis.sh
-
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
@@ -392,8 +392,9 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@1.0-service
+    android.hardware.thermal@1.0.vendor \
+    android.hardware.thermal@2.0.vendor \
+    android.hardware.thermal@1.0-impl
 
 # TinyXML
 PRODUCT_PACKAGES += \

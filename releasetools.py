@@ -19,12 +19,10 @@ import re
 
 def FullOTA_InstallEnd(info):
   OTA_InstallEnd(info)
-  CopyEgisFix(info)
   return
 
 def IncrementalOTA_InstallEnd(info):
   OTA_InstallEnd(info)
-  CopyEgisFix(info)
   return
 
 def AddImage(info, basename, dest):
@@ -34,13 +32,7 @@ def AddImage(info, basename, dest):
   info.script.AppendExtra('package_extract_file("%s", "%s");' % (name, dest))
 
 def OTA_InstallEnd(info):
-  info.script.Print("Patching firmware images...")
+  info.script.Print("Patching dtbo and vbmeta images...")
   AddImage(info, "dtbo.img", "/dev/block/by-name/dtbo")
   AddImage(info, "vbmeta.img", "/dev/block/by-name/vbmeta")
   return
-
-def CopyEgisFix(info):
-  info.script.Print("Searching for EGIS FP and patching...")
-  info.script.AppendExtra('run_program("/sbin/sh", "/tmp/install/bin/egis.sh");')
-  return
-
