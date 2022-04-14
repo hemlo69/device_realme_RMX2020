@@ -24,6 +24,9 @@ $(call inherit-product, $(DEVICE_PATH)/app/RealmeDirac/dirac.mk)
 # Parts
 $(call inherit-product, $(DEVICE_PATH)/app/RealmeParts/parts.mk)
 
+#gapps
+$(call inherit-product-if-exists, vendor/gapps/basic/config.mk)
+
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Dynamic Partition
@@ -444,6 +447,3 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
     $(DEVICE_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
-
-#gappsbasic
-$(call inherit-product-if-exists, vendor/gapps/basic/config.mk)
