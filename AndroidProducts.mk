@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/superior_RMX2020.mk
+    $(LOCAL_DIR)/palladium_RMX2020.mk
 
 COMMON_LUNCH_CHOICES := \
-    superior_RMX2020-user \
-    superior_RMX2020-userdebug \
-    superior_RMX2020-eng
+    palladium_RMX2020-user \
+    palladium_RMX2020-userdebug \
+    palladium_RMX2020-eng
