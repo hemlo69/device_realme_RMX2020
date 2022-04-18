@@ -503,6 +503,11 @@ vendor/lib64/libmtkcam_sysutils.so
 vendor/lib64/libmtkcam_tuning_utils.so
 vendor/lib64/libmtkcam_ulog.so
 vendor/lib64/libocam_common.so
+vendor/lib64/libOPPORectify.so
+vendor/lib64/liboppo_aisd.so
+vendor/lib64/liboppo_arcSoftBokehEngine.so
+vendor/lib64/liboppo_blank_algo.so
+vendor/lib64/liboppo_platform_hwi.so
 vendor/lib64/libstdc++.so
 vendor/lib64/libstereoinfoaccessor_vsdof.so
 vendor/lib64/libstface_fd_api.so
@@ -891,9 +896,7 @@ vendor/bin/hw/vendor.oppo.hardware.biometrics.fingerprint@2.1-service
 vendor/bin/hw/vendor.silead.hardware.fingerprintext@1.0-service
 vendor/etc/init/vendor.oppo.hardware.biometrics.fingerprint@2.1-service.rc|85928aca3e8473d43214e0cb0ae2f1bbae5771ea
 vendor/etc/init/vendor.silead.hardware.fingerprintext@1.0-service.rc
-vendor/etc/permissions/com.fingerprints.fpmmi.xml
 vendor/lib/hw/fingerprint.silead.default.so
-vendor/lib/libalipay_factory.so
 vendor/lib/libsl_fp_algo.so
 vendor/lib/libsl_fp_impl.so
 vendor/lib/libsl_fp_nosec.so
@@ -901,7 +904,6 @@ vendor/lib/libsl_fp_prepro.so
 vendor/lib64/hw/fingerprint.silead.default.so
 vendor/lib64/android.frameworks.fingerprintservice@1.0.so
 vendor/lib64/libRbsFlow.so
-vendor/lib64/libalipay_factory.so
 vendor/lib64/libsl_fp_algo.so
 vendor/lib64/libsl_fp_impl.so
 vendor/lib64/libsl_fp_nosec.so
@@ -922,9 +924,9 @@ vendor/firmware/customfilter/catcher_filter_1_ulwctg_n_meta.bin|92f1f3991623391c
 vendor/firmware/emmc/HYNIX-hB8aP>.bin_crc.bin|7fd981827662cca107437a2c013c07e4bfdef2ef
 vendor/firmware/emmc/HYNIX-hC8aP>.bin_crc.bin|f6c7f5422ad0cd9b0256e4f40a9b16956f9dfa02
 vendor/firmware/emmc/HYNIX-hC9aP3.bin_crc.bin|075450a6087b5026808b5f8573119e4c4610044f
-vendor/firmware/emmc/move_target_emmc_fw_to_opporeserve1.sh|aba1bfe54e35b8f50e4c6a6c124f3f560d6501ad
 vendor/firmware/emmc/SAMSUNG-DD68MB.bin_crc.bin|4841efc0613661d7ee4e48935bbef41dc4aebf19
 vendor/firmware/emmc/SAMSUNG-DH6DAB.bin_crc.bin|96f4cc285b8b01987ee9b56401ce9f44c7126331
+vendor/firmware/emmc/move_target_emmc_fw_to_opporeserve1.sh|aba1bfe54e35b8f50e4c6a6c124f3f560d6501ad
 vendor/firmware/tp/19741/hlt_boe_novatek_fw.bin|24b8f8b70380287e293bac0642ef5c2963f441f2
 vendor/firmware/tp/19741/hlt_boe_novatek_mp_fw.bin|9cf91cb755707150c78c3faa0498e228e2db7483
 vendor/firmware/tp/19741/hlt_boe_novatek_signed_fw.bin|a76db1a305c5c9b1ad3e4e4b64bc8ba7d4d17b86
@@ -934,8 +936,6 @@ vendor/firmware/tp/19741/txd_auo_ilitek_oppo_signed.bin|4e1626590d7b6fd5524d34ed
 vendor/firmware/tp/19741/xl_auo_ilitek.bin|cb382b0bbb7effee4ef49ed4ba36e806c9462c50
 vendor/firmware/tp/19741/xl_auo_ilitek.ini|ff89c98313f1775b694980b6512bc9150c47e178
 vendor/firmware/tp/19741/xl_auo_ilitek_oppo_signed.bin|3523f4e9ef941f5acf9737758cd0b1e598441460
-vendor/firmware/ufs/SAMSUNG-KM8V7001JM-B810.bin|9b3fe73a0b64f1c1ee703d63b0b5f56005f96f0d
-vendor/firmware/ufs/move_target_ufs_fw_to_opporeserve1.sh|6fa1891e3900960e3c99d5cc0e1a089e40f98c92
 vendor/firmware/BT_FW.cfg|b9a6d28bdb5b7f7b34881a6ff33fa48ff9db81b0
 vendor/firmware/WIFI_RAM_CODE_soc1_0_1a_1.bin|b637ac49e6b8e5f7c17fb155289075083c71c5b7
 vendor/firmware/WMT_SOC.cfg|438c142bd3e2ffba03857e7d5c6802d2b038d50e
@@ -1290,16 +1290,6 @@ vendor/lib64/librgbwlightsensor.so
 
 # Media - from RMX2020-user 10 QP1A.190711.020 RMX2020_11.A.61 release-keys
 lib/libmtkavenhancements.so|59813fd99ac6b34f7bff9b816af2a7d8c1f48d67
-lib64/extractors/libOppomp4extractor.so|bee4f00a92e797f80d23c00a8d64a6926c78f69c
-lib64/extractors/libmtkadpcmextractor.so|bdf2de02413c6ab35229403bcf76c85853cd921f
-lib64/extractors/libmtkalacextractor.so|6038adee1539804d1120980c55c7b020d4e958ae
-lib64/extractors/libmtkapeextractor.so|f63b79046faaff3c0e4e9d58bacc03a77deb82ad
-lib64/extractors/libmtkasfextractor.so|32b413ffa15381016b72ce941c00bce923ae391f
-lib64/extractors/libmtkaviextractor.so|f57d7a3053c8965a74cee950c7aedde3cdeb28e5
-lib64/extractors/libmtkflvextractor.so|e9ae5d85a2a59e66193c02411df8c89ed5d203f0
-lib64/extractors/libmtkmkvextractor.so|27cf57204e5b749eda10147eb3e06c6f69a30af3
-lib64/extractors/libmtkmp3extractor.so|b7dab63381d744daaa402a2959608b4dbb1f9664
-lib64/extractors/libmtkmpeg2extractor.so|312feab2e290c1917a1a224e8f3a1bc0a52c7246
 lib64/libmtkavenhancements.so|2660f5f1fa3bc0877bfc69dcf0212f8c0adb652c
 vendor/bin/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-service|65fe53c71baf4458493c050a84864f108d6b408c
 vendor/bin/recordevent|46598a086b37baf361ef9ba262f844a167d4c327
@@ -1485,34 +1475,6 @@ vendor/lib64/vendor.mediatek.hardware.atci@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
-# Oppo
-vendor/bin/hw/vendor.oppo.hardware.cryptoeng@1.0-service
-vendor/bin/hw/vendor.oppo.hardware.hypnus@1.0-service
-vendor/bin/OppoKeybox
-vendor/bin/init.oppo.fingerprints.sh
-vendor/bin/init.oppo.wifi.debug.sh
-vendor/etc/init/hw/init.oppo.reserve.rc
-vendor/etc/init/hw/init.oppo.vendor.motor.rc
-vendor/etc/init/init.oppo.connectivity.rc
-vendor/etc/init/vendor.oppo.hardware.cryptoeng@1.0-service_FDE.rc
-vendor/etc/init/vendor.oppo.hardware.hypnus@1.0-service.rc
-vendor/etc/permissions/vendor-oppo-hardware.cryptoeng.xml
-vendor/etc/self_init_config/common/self_init_config.xml
-vendor/lib/libhypnusclient.so
-vendor/lib/vendor.oppo.hardware.hypnus@1.0.so
-vendor/lib64/libOPPORectify.so
-vendor/lib64/libhypnusclient.so
-vendor/lib64/liboppo_aisd.so
-vendor/lib64/liboppo_arcSoftBokehEngine.so
-vendor/lib64/liboppo_blank_algo.so
-vendor/lib64/liboppo_platform_hwi.so
-vendor/lib64/vendor.oppo.engnative.transfer@1.0.so
-vendor/lib64/vendor.oppo.hardware.commondcs@1.0.so
-vendor/lib64/vendor.oppo.hardware.cryptoeng@1.0.so
-vendor/lib64/vendor.oppo.hardware.hypnus@1.0.so
-vendor/lib64/vendor.oppo.hardware.wifi.hostapd@1.0.so
-vendor/lib64/vendor.oppo.hardware.wifi.supplicant@1.0.so
-
 # Power
 vendor/bin/hw/power_legacy_test_v_1_0
 vendor/bin/hw/power_native_test_v_1_0
@@ -1648,8 +1610,8 @@ vendor/lib64/vendor.mediatek.hardware.radio_op@1.4.so|507ae087eb52e4b068aebebbf0
 vendor/lib64/vendor.mediatek.hardware.radio_op@2.0.so|15cea88f9d03b7165e0e59193f3a5a7700d61150
 
 # Radio (Configs) - from RMX2020-user 10 QP1A.190711.020 RMX2020_11.A.61 release-keys
-vendor/etc/apdb/APDB_MT6768_S01__W1952|f06c460b74c91acc9d7856cd1f20c1150aeec456
 vendor/etc/apdb/APDB_MT6768_S01__W1952_ENUM|cefb92631c8783349bfd3c4ff6584c8e633420e7
+vendor/etc/apdb/APDB_MT6768_S01__W1952|f06c460b74c91acc9d7856cd1f20c1150aeec456
 vendor/etc/DSM.xml|ffd530540bb633381ae6d75980dc17405a23cbe0
 vendor/etc/DSM_config.xml|a3b5821a6a8e9441018773f4ea834f7e80bf3719
 vendor/etc/ecc_list.xml|d6e20ef31f22b4886ad9cbc97b33f47574fbf0d8
@@ -1683,9 +1645,9 @@ vendor/lib64/sensors.ap.so|997485771756602594b7156358f3682bc012d326
 
 # Thermal - from realme/RMX2020/RMX2020:11/RP1A.200720.011/1627637499567:user/release-keys
 vendor/bin/hw/android.hardware.thermal@2.0-service.mtk|3dea980c62b4e6fdb7c279b9f4237eb8c7ee0fec
-vendor/bin/thermal|882fc822cda14a46ae7732ae2bf4571e2680bf2a
 vendor/bin/thermal_manager|d13cc43436ff6cbf4d90df4d2f16b1e5bf04876d
 vendor/bin/thermalloadalgod|bef00e0aa1cf4581a912d1e71d97bb264afc7cc6
+vendor/bin/thermal|882fc822cda14a46ae7732ae2bf4571e2680bf2a
 vendor/etc/init/android.hardware.thermal@2.0-service.mtk.rc|1274fa9e113cfdfea42c518e178a886a23d5bf98
 vendor/etc/init/init.thermal.rc|cb4f259f720f2481a3e9b4d68d7c72193c554faa
 vendor/etc/init/init.thermal_manager.rc|764c19af5e285345a9fd5b75131fa9588b609d62
@@ -1785,3 +1747,5 @@ vendor/lib64/libwpa_client.so
 vendor/lib64/vendor.mediatek.hardware.wifi.hostapd@2.0.so
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.0.so
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.1.so
+vendor/lib64/vendor.oppo.hardware.wifi.hostapd@1.0.so
+vendor/lib64/vendor.oppo.hardware.wifi.supplicant@1.0.so
